@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        body{
+            background-image: url(images/conta.jpeg);
+            background-size: cover;
+        }
+        h3{
+            padding-left: 20px;
+        }
+        .container {
+            width: 30%;
+            margin: auto;
+            overflow: hidden;
+            
+        }
+        header {
+            
+            color: #333;
+            padding-top: 30px;
+            min-height: 70px;
+           
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header ul li {
+            display: inline;
+            padding: 0 20px 0 20px;
+            position: relative;
+        }
+        header ul li a:hover {
+            color: #77aaff;
+        }
+        header ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #333;
+            padding: 10px;
+            list-style: none;
+        }
+        header ul li:hover ul {
+            display: block;
+        }
+        header ul li ul li {
+            display: block;
+        }
+        header ul li a i {
+            margin-right: 8px;
+        }
+        .contact {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        .contact h1, .contact h2, .contact p {
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact form label {
+            margin-bottom: 5px;
+        }
+        .contact form input, .contact form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #77aaff;
+            color: #fff;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            let isValid = true;
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const errorElements = document.querySelectorAll('.error');
+            
+            errorElements.forEach(el => el.textContent = '');
+            
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            }
+            
+            if (!email) {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                document.getElementById('emailError').textContent = 'Invalid email format.';
+                isValid = false;
+            }
+            
+            if (!message) {
+                document.getElementById('messageError').textContent = 'Message is required.';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                alert('Form submitted successfully!');
+                // Here you can add code to actually submit the form
+            }
+        }
+        
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</head>
+<body>
+    <h3><a href="pa.html" class="btn btn-info">Home</a></h3>
+    <header>
+        <div class="container">
+         <center><h1>Contact Us</h1></center>
+            </div>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section class="contact container">
+        <p>We'd love to hear from you! Whether you have a question about our services, need assistance with planning your trip, or just want to share your travel experiences, feel free to get in touch with us.</p>
+        
+        <h2>Contact Information</h2>
+        <ul>
+            <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:contact@places.com">22KQ1A6305@pace.ac.in</a></li>
+            <li><i class="fas fa-phone"></i> <strong>Phone:</strong>8186835888</li>
+            <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong>ONGOLE</li>
+        </ul>
+
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" onsubmit="validateForm(event)">
+            <label for="name"><i class="fas fa-user"></i> Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error"></span>
+            
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
+            
+            <label for="message"><i class="fas fa-pencil-alt"></i> Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span id="messageError" class="error"></span>
+            
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Places. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

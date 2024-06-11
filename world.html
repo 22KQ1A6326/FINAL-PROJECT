@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Destinations</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #78acd4;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #78acd4;
+}
+
+main {
+    padding: 2rem;
+}
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:inline;
+}
+
+.destination {
+    flex: 1 1 300px;
+    margin: 2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.destination img {
+    width: 100%;
+    height: 200;
+}
+
+.destination h2 {
+    margin: 0;
+    padding: 1rem 0;
+    background-color: #f8f8f8;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .destinations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination {
+        flex: 1 1 100%;
+    }
+}
+ 
+
+
+</style>
+<body>
+    <h3><a href="pa.html" class="btn btn-info">Home</a></h3>
+     <header>
+        <h1>Historic Destinations In World</h1>
+
+    </header>
+    <main>
+        <div class="destinations">
+            <div class="destination"  width="200" height="200" onclick="showPlaces('bangkok-places')">
+                <img src="images/taj.webp"  width="200" height="200" >
+                <h2>Taj Mahal<br>India</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Taj_Mahal" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination"   onclick="showPlaces('pattaya-places')" >
+                <img src="images/py.jpg"  width="250" height="200">
+                <h2>Pyramids Of Giza<br>Egypt</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/china.webp" width="200" height="200">
+                <h2>The Great Wall Of China</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Great_Wall_of_China" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/machu.webp"  width="200" height="200">
+                <h2>Machu Picchu<br>Peru</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Machu_Picchu" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/hawa.webp"  width="200" height="200">
+                <h2>Hawa Mahal<br>Rajasthan</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Hawa_Mahal" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/bor.jpeg"  width="200" height="200">
+                <h2>Borobodur<br>Indonesia</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Borobudur" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/wat.webp"  width="200" height="200">
+                <h2>Angkor Wat<br>Cambodia</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Angkor_Wat" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/chi.webp"  width="200" height="200">
+                <h2>Tikal<br>Mexico&Belize</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Tikal" class="btn btn-info">Know More</a></h3>
+            </div>
+            
+</main>
+<center>
+    <footer>
+        <p>&copy; 2024 Historic Places</p>
+    </footer>
+    </center>
+</body>
+</html>

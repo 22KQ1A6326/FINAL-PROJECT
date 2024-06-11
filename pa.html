@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 75px;
+    width: 150px;
+}
+body{
+    background-image: url(images/tv.jpg);
+    background-size:cover;
+}
+header {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+ }
+h1{
+    text-align: center;
+    padding-right: 450px;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(10, 10, 10);
+}
+
+.nav-link i {
+    margin-right: 5px;
+    color: rgb(11, 11, 11);
+}
+.nav-item li{
+    color: aquamarine;
+}
+.card-title i {
+    margin-right: 10px;
+}
+</style>
+</head>
+<body>
+    <header class="text-black text-center py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <img src="images/lo.jpeg" alt="Places Logo" class="logo">
+                <h1 class="ml-3">Historic Places</h1>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="pa.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reg.html"><i class="fas fa-user-plus"></i> Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ab.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-map-marker-alt"></i> Destinations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="im.html"> <i class="fas fa-gopuram"></i> Temples</a>
+                            <a class="dropdown-item" href="caves.html"><i class="fas fa-igloo"></i>  Caves</a>
+                            <a class="dropdown-item" href="world.html"><i class="fas fa-vihara"></i> World</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-4">
+        <section id="home" class="text-center">
+            <h2>Welcome to Places</h2>
+            <p class="lead">Your ultimate guide to exploring the most amazing destinations around the world. Discover new places, learn about different cultures, and get inspired for your next adventure.</p>
+        </section>
+
+        
+        <section id="destinations" class="my-5">
+            <h2>Top Destinations</h2>
+            <div class="row">
+                <div class="col-md-4" id="paris">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-gopuram"></i>Temples</h3>
+                            <p class="card-text">Best places to visit in India</p>
+                            <a href="im.html" class="btn btn-info">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="tokyo">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><i class="fas fa-igloo"></i>Caves</h3>
+                            <p class="card-text">Explore the caves to get full enjoyment</p>
+                            <a href="caves.html" class="btn btn-info">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="newyork">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            
+                            <h3 class="card-title"><i class="fas fa-vihara"></i>World</h3>
+                            <p class="card-text">Discover the energy and excitement of in travelling.</p>
+                            <a href="world.html" class="btn btn-info">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2024 Places. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

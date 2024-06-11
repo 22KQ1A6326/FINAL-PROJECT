@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Destinations</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #78acd4;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #78acd4;
+}
+
+main {
+    padding: 2rem;
+}
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.destination {
+    flex: 1 1 300px;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.destination img {
+    width: 100%;
+    height: 200;
+}
+
+.destination h2 {
+    margin: 0;
+    padding: 1rem 0;
+    background-color: #f8f8f8;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .destinations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination {
+        flex: 1 1 100%;
+    }
+}
+ 
+
+
+</style>
+<body>
+    <h3><a href="pa.html" class="btn btn-info">Home</a></h3>
+     <header>
+        <h1>Historic Temples</h1>
+
+    </header>
+    <main>
+        <div class="row">
+        <div class="destinations">
+            <div class="destination"   onclick="showPlaces('pattaya-places')" >
+                <img src="images/Konark.jpeg"  width="250" height="200">
+                <h2>Konark Sun Temple<br>Odisha</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Konark_Sun_Temple" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/agni.jpeg" width="200" height="200">
+                <h2>Arunachalam Temple<br>TamilNadu</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Arunachalesvara_Temple" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/Khajuraho.jpg"  width="200" height="200">
+                <h2>Khajurahu Temple<br>Madhya Pradesh</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments#:~:text=Most%20Khajuraho%20temples%20were%20built,kilometres%20(2.3%20sq%20mi)." class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination"  width="200" height="200" onclick="showPlaces('bangkok-places')">
+                <img src="images/puri1.jpeg"  width="200" height="200" >
+                <h2>Puri Jagannath Temple<br>Puri</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Jagannath_Temple,_Puri" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/shri.jpeg"  width="200" height="200">
+                <h2>Shri Mata Vaishno Devi Temple<br>Katra</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Vaishno_Devi_Temple" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/hampi.jpeg"  width="200" height="200">
+                <h2>Hampi Temple<br>Karnataka</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Hampi" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/meenakshi.jpg"  width="200" height="200">
+                <h2>Meenakshi Amman Temple<br>Madhurai</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Meenakshi_Temple" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/mahabodhi.jpeg"  width="200" height="200">
+                <h2>Mahabodhi Temple<br>Bihar</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Mahabodhi_Temple" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/durga.jpeg"  width="200" height="200">
+                <h2>Nartiang Durga Temple<br>Meghalaya</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Nartiang_Durga_Temple" class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/rani.jpg"  width="200" height="200">
+                <h2>Rani ki Vav Temple<br>Gujarat</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Rani_ki_Vav#:~:text=Rani%20Ki%20Vav%20(%20lit.,century%20Chaulukya%20king%20Bhima%20I." class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/Maha.jpg"  width="200" height="200">
+                <h2>Mahabalipuram Temple<br>TamilNadu</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Group_of_Monuments_at_Mahabalipuram#:~:text=The%20Mahabalipuram%20temples%20are%20in,State%20Highways%2049%20and%2049A)." class="btn btn-info">Know More</a></h3>
+            </div>
+            <div class="destination" onclick="showPlaces('pattaya-places')">
+                <img src="images/chenna.jpg"  width="200" height="200">
+                <h2>Chenna Keshava Temple<br>Belur</h2>
+                <h3><a href="https://en.wikipedia.org/wiki/Chennakeshava_Temple,_Belur" class="btn btn-info">Know More</a></h3>
+            </div>
+        </div>  
+    
+</main>
+<center>
+    <footer>
+        <p>&copy; 2024 Historic Places</p>
+    </footer>
+    </center>
+</body>
+</html>
